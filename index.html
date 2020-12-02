@@ -14,85 +14,89 @@
         <a-scene
         vr-mode-ui="enabled: false"
         embedded
-        arjs="sourceType: webcam; debugUIEnabled: false;"
+        isMobile = "true"
+        arjs=" debugUIEnabled: false;"
+        
         >
-            <a-entity position="0 0 30"   >
-                <a-camera>
-                  <a-cursor></a-cursor>
+            <a-entity position="0 0 80" >
+                <a-camera rotation-reader>
+                  <a-cursor ></a-cursor>
                 </a-camera>
             </a-entity>
-            <a-text  position="1 2 1"  align="center" value="This content will always face you." look-at="[camera]"  "></a-text>
+            <a-text  position="0 2 0"  align="center" value="This content will always face you." look-at="[camera]"  "></a-text>
             
             
+
+
+            <a-entity class="orbit"    animation="property: rotation; from: 0 27.7 0; to: 0 387.7 0; loop: true; dur: 50000; easing: linear"> 
+                
+                <a-sphere link="href: https://www.cnn.com" color="tomato" position="0 0 20" radius="1" >
+                </a-sphere >
+                <a-sphere  color="yellow" position="0 0 0" radius="1" >
+                </a-sphere >
+            </a-entity>
+
+            <a-entity class="orbit"   animation="property: rotation; from: 0 55.4 0; to: 0 415.4 0; loop: true; dur: 50000; easing: linear"> 
+                <a-sphere  color="green" position="0 0 20" radius="1" >
+                  </a-sphere >
+            </a-entity>
+
+            <a-entity class="orbit"   animation="property: rotation; from: 0 83.1 0; to: 0 443.1 0; loop: true; dur: 50000; easing: linear"> 
+                <a-sphere  color="green" position="0 0 20" radius="1" >
+                  </a-sphere >
+            </a-entity>
+
+            <a-entity class="orbit"   animation="property: rotation; from: 0 110.8 0; to: 0 470.8 0; loop: true; dur: 50000; easing: linear"> 
+                <a-sphere  color="green" position="0 0 20" radius="1" >
+                  </a-sphere >
+            </a-entity>
+
+            <a-entity class="orbit"   animation="property: rotation; from: 0 138.5 0; to: 0 498.5 0; loop: true; dur: 50000; easing: linear"> 
+                <a-sphere  color="green" position="0 0 20" radius="1" >
+                  </a-sphere >
+            </a-entity>
+
+            <a-entity class="orbit"   animation="property: rotation; from: 0 166.2 0; to: 0 526.2 0; loop: true; dur: 50000; easing: linear"> 
+                <a-sphere  color="green" position="0 0 20" radius="1" >
+                  </a-sphere >
+            </a-entity>
+
+            <a-entity class="orbit"   animation="property: rotation; from: 0 193.9 0; to: 0 553.9 0; loop: true; dur: 50000; easing: linear"> 
+                <a-sphere  color="green" position="0 0 20" radius="1" >
+                  </a-sphere >
+            </a-entity>
+
+            <a-entity class="orbit"   animation="property: rotation; from: 0 221.6 0; to: 0 581.6 0; loop: true; dur: 50000; easing: linear"> 
+                <a-sphere  color="green" position="0 0 20" radius="1" >
+                  </a-sphere >
+            </a-entity>
+
+            <a-entity class="orbit"   animation="property: rotation; from: 0 249.3 0; to: 0 609.3 0; loop: true; dur: 50000; easing: linear"> 
+                <a-sphere  color="green" position="0 0 20" radius="1" >
+                  </a-sphere >
+            </a-entity>
+
+            <a-entity class="orbit"   animation="property: rotation; from: 0 277 0; to: 0 637 0; loop: true; dur: 50000; easing: linear"> 
+                <a-sphere  color="green" position="0 0 20" radius="1" >
+                  </a-sphere >
+            </a-entity>
+
+            <a-entity class="orbit"   animation="property: rotation; from: 0 304.7 0; to: 0 664.7 0; loop: true; dur: 50000; easing: linear"> 
+                <a-sphere  color="green" position="0 0 20" radius="1" >
+                  </a-sphere >
+            </a-entity>
+
+            <a-entity class="orbit"   animation="property: rotation; from: 0 332.4 0; to: 0 692.4 0; loop: true; dur: 50000; easing: linear"> 
+                <a-sphere  color="green" position="0 0 20" radius="1" >
+                  </a-sphere >
+            </a-entity>
+
+            <a-entity class="orbit"   animation="property: rotation; from: 0 360.1 0; to: 0 720.1 0; loop: true; dur: 50000; easing: linear"> 
+                <a-sphere  color="green" position="0 0 20" radius="1" >
+                  </a-sphere >
+            </a-entity>
             
-            <a-entity class="orbit"   animation="property: rotation; from: 0 27.7 0; to: 0 387.7 0; loop: true; dur: 10000; easing: linear"> 
-                <a-sphere  color="tomato" position="0 0 10" radius="1" >
-                  </a-sphere >
-                  <a-sphere  color="yellow" position="0 0 0" radius="1" >
-                  </a-sphere >
-            </a-entity>
 
-            <a-entity class="orbit"   animation="property: rotation; from: 0 55.4 0; to: 0 415.4 0; loop: true; dur: 10000; easing: linear"> 
-                <a-sphere  color="green" position="0 0 10" radius="1" >
-                  </a-sphere >
-            </a-entity>
-
-            <a-entity class="orbit"   animation="property: rotation; from: 0 83.1 0; to: 0 443.1 0; loop: true; dur: 10000; easing: linear"> 
-                <a-sphere  color="green" position="0 0 10" radius="1" >
-                  </a-sphere >
-            </a-entity>
-
-            <a-entity class="orbit"   animation="property: rotation; from: 0 110.8 0; to: 0 470.8 0; loop: true; dur: 10000; easing: linear"> 
-                <a-sphere  color="green" position="0 0 10" radius="1" >
-                  </a-sphere >
-            </a-entity>
-
-            <a-entity class="orbit"   animation="property: rotation; from: 0 138.5 0; to: 0 498.5 0; loop: true; dur: 10000; easing: linear"> 
-                <a-sphere  color="green" position="0 0 10" radius="1" >
-                  </a-sphere >
-            </a-entity>
-
-            <a-entity class="orbit"   animation="property: rotation; from: 0 166.2 0; to: 0 526.2 0; loop: true; dur: 10000; easing: linear"> 
-                <a-sphere  color="green" position="0 0 10" radius="1" >
-                  </a-sphere >
-            </a-entity>
-
-            <a-entity class="orbit"   animation="property: rotation; from: 0 193.9 0; to: 0 553.9 0; loop: true; dur: 10000; easing: linear"> 
-                <a-sphere  color="green" position="0 0 10" radius="1" >
-                  </a-sphere >
-            </a-entity>
-
-            <a-entity class="orbit"   animation="property: rotation; from: 0 221.6 0; to: 0 581.6 0; loop: true; dur: 10000; easing: linear"> 
-                <a-sphere  color="green" position="0 0 10" radius="1" >
-                  </a-sphere >
-            </a-entity>
-
-            <a-entity class="orbit"   animation="property: rotation; from: 0 249.3 0; to: 0 609.3 0; loop: true; dur: 10000; easing: linear"> 
-                <a-sphere  color="green" position="0 0 10" radius="1" >
-                  </a-sphere >
-            </a-entity>
-
-            <a-entity class="orbit"   animation="property: rotation; from: 0 277 0; to: 0 637 0; loop: true; dur: 10000; easing: linear"> 
-                <a-sphere  color="green" position="0 0 10" radius="1" >
-                  </a-sphere >
-            </a-entity>
-
-            <a-entity class="orbit"   animation="property: rotation; from: 0 304.7 0; to: 0 664.7 0; loop: true; dur: 10000; easing: linear"> 
-                <a-sphere  color="green" position="0 0 10" radius="1" >
-                  </a-sphere >
-            </a-entity>
-
-            <a-entity class="orbit"   animation="property: rotation; from: 0 332.4 0; to: 0 692.4 0; loop: true; dur: 10000; easing: linear"> 
-                <a-sphere  color="green" position="0 0 10" radius="1" >
-                  </a-sphere >
-            </a-entity>
-
-            <a-entity class="orbit"   animation="property: rotation; from: 0 360.1 0; to: 0 720.1 0; loop: true; dur: 10000; easing: linear"> 
-                <a-sphere  color="green" position="0 0 10" radius="1" >
-                  </a-sphere >
-            </a-entity>
-            
-            
             
 <!--             
             

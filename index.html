@@ -3,42 +3,63 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>GeoAR.js demo</title>
+        <title>History of Games Action Adventure</title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script> -->
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script> -->
+        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script> 
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     </head>
 
     <body style="margin: 0; overflow: hidden">
         <a-scene
-        <!-- vr-mode-ui="enabled: false"
+        vr-mode-ui="enabled: false"
         embedded
-        arjs="sourceType: webcam; debugUIEnabled: false;" -->
+        arjs="sourceType: webcam; debugUIEnabled: false;"
         >
-            <!-- <a-box color="#00ff00" look-at="[gps-camera]" gps-entity-place="latitude: 49.27424770146552; longitude: -123.12621981380872;"></a-box> -->
-            <a-entity position="0 0 80">
-                <a-camera></a-camera>
+            <a-entity position="0 0 30"   >
+                <a-camera>
+                  <a-cursor></a-cursor>
+                </a-camera>
             </a-entity>
-
-            <a-entity rotation="0 0 0"  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear">
+            <a-text  position="1 2 1"  align="center" value="This content will always face you." look-at="[camera]"  "></a-text>
+            
+            
+            
+            <!-- <a-entity class="orbit1"   animation="property: rotation; from: 0 270 0; to: 0 -90 0; loop: true; dur: 10000; easing: linear"> </a-entity> -->
+            
+            
+            
+            
+            
+            <a-entity id="worldEntity"   animation="property: rotation; from: 0 270 0; to: 0 -90 0; loop: true; dur: 10000; easing: linear">
               
+              <a-sphere  color="orange" position="0 0 0" radius="1" 
+                event-set__enter="_event: mouseenter; material.color: green "
+                event-set__leave="_event: mouseleave; material.color: orange"
+                event-set__tarE="_event: mouseenter; _target: #worldEntity; animation.dur: 99999"
+                event-set__tarL="_event: mouseleave; _target: #worldEntity; animation.dur: 10000; easing: linear"
+              ></a-sphere >
+
               <a-sphere  color="tomato" position="0 0 10" radius="1" >
                 <!-- <a-entity  position="0 3 0" material="color: blue; shader: flat;" text="value:wqwdqwd dqwas; color:green; align: center"></a-entity> -->
-                <a-text value="Hello, World!"></a-text>
               </a-sphere >
-              
-              
-              <a-sphere  color="orange" position="0 0 0" radius="1" >
+              <a-box color="black" position="5 0 10" >
                 <!-- <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="5000"></a-animation> -->
-              </a-sphere >
-              
-              <a-box color="gray" position="3 0 10" >
-                  <!-- <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="5000"></a-animation> -->
               </a-box>
+              
+              <a-box color="gray" position="10 0 10" >
+                <!-- <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="5000"></a-animation> -->
+              </a-box>
+              
+                
+                <!-- <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="5000"></a-animation> -->
+              
+              
+
 
             </a-entity>
 
-             <!-- <a-camera gps-camera rotation-reader> </a-camera> --> 
+            
         </a-scene>
     </body>
 </html>

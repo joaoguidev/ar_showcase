@@ -56,6 +56,12 @@
                         event-set__enter="_event: mouseenter; material.color: green "
                         event-set__leave="_event: mouseleave; material.color: yellow" >
                         <a-text  position="0 0.9 0" scale="2 2"  align="center" value="References" look-at="#camera"></a-text>
+                        <a-entity animation="property: rotation; from: 0 360 0; to: 0 0 0; loop: true; dur: 8000; easing: linear" shadow="receive: true">
+                            <a-sphere id="lens15" link="href: ./pages/References.html" roughness="0.3"  color="pink" position="0 0 1.5" radius="0.2" 
+                                event-set__enter="_event: mouseenter; material.color: green "
+                                event-set__leave="_event: mouseleave; material.color: pink" >
+                            </a-sphere >
+                        </a-entity>
                     </a-sphere >
                 </a-entity>
 

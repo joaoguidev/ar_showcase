@@ -25,6 +25,10 @@
             <a-entity position="0 5 50" >
                 <a-camera id="camera" rotation-reader>
                     <a-cursor 
+                    fuse="true"
+                    fuse-timeout="1000"
+                    animation__fusing="property: scale; startEvents: fusing; easing: linear; dur: 1000; from: 1 1 1; to: 0.1 0.1 0.1"
+                    animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
                     ></a-cursor>
                 </a-camera>
             </a-entity>
@@ -32,7 +36,7 @@
             <a-entity rotation="10 0 0">
 
 
-                <a-entity class="orbit"    animation="property: rotation; from: 0 27.7 0; to: 0 387.7 0; loop: true; dur: 50000; easing: linear"> 
+                <a-entity class="orbit" animation="property: rotation; from: 0 27.7 0; to: 0 387.7 0; loop: true; dur: 50000; easing: linear"> 
                             
                     <a-sphere id="lens1" shadow="receive: true" roughness="0.3" link="href: ./pages/lens1.html" color="tomato" position="0 0 20" radius="1" 
                         event-set__enter="_event: mouseenter; material.color: green "
@@ -41,6 +45,7 @@
                         <a-text  position="0 1.3 0" scale="2 2"  align="center" value="Lens of Core Game Elements" look-at="#camera"  "></a-text>
                     </a-sphere >
                     <a-entity 
+
                         link="href: ./pages/lens15.html"
                         geometry="primitive: sphere; radius: 1.5"
                         material="color: #FFF; shader: flat"

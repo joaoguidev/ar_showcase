@@ -18,12 +18,10 @@
         isMobile = "true"
         arjs=" debugUIEnabled: false;"
         >
-            <a-assets>
-                <a-asset-item id="planet1" ></a-asset-item>
-            </a-assets>
 
-            <a-entity position="0 5 50" >
-                <a-camera id="camera" rotation-reader>
+
+            <a-entity  id="rig" position="0 5 50" >
+                <a-camera id="camera" spectator="true" rotation-reader>
                     <a-cursor 
                     fuse="true"
                     fuse-timeout="1000"

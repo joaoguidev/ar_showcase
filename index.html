@@ -12,6 +12,7 @@
 
     <body style="margin: 0; overflow: hidden">
         <a-scene
+        
         vr-mode-ui="enabled: false"
         embedded
         isMobile = "true"
@@ -33,26 +34,25 @@
 
                 <a-entity class="orbit"    animation="property: rotation; from: 0 27.7 0; to: 0 387.7 0; loop: true; dur: 50000; easing: linear"> 
                             
-                    <a-sphere id="lens1" roughness="0.3" link="href: ./pages/lens1.html" color="tomato" position="0 0 20" radius="1" 
+                    <a-sphere id="lens1" shadow="receive: true" roughness="0.3" link="href: ./pages/lens1.html" color="tomato" position="0 0 20" radius="1" 
                         event-set__enter="_event: mouseenter; material.color: green "
                         event-set__leave="_event: mouseleave; material.color: tomato"
                         >
                         <a-text  position="0 1.3 0" scale="2 2"  align="center" value="Lens of Core Game Elements" look-at="#camera"  "></a-text>
                     </a-sphere >
                     <a-entity 
-                        
                         link="href: ./pages/lens15.html"
                         geometry="primitive: sphere; radius: 1.5"
                         material="color: #FFF; shader: flat"
-                        light="color: #DDDDFF; distance: 120; intensity: 2; type: point" 
+                        light="color: #DDDDFF; distance: 120; intensity: 2; castShadow: true; type: point" 
                         position="0 0 0" >
                         <a-text  position="0 2 0" scale="2 2"  align="center" value="Why Half-Life" look-at="#camera"></a-text>
                     </a-entity >
                 </a-entity>
                 
                 
-                <a-entity class="orbit"  animation="property: rotation; from: 0 360 0; to: 0 0 0; loop: true; dur: 10000; easing: linear"> 
-                    <a-sphere  id="lens15" link="href: ./pages/References.html" roughness="0.3"  color="yellow" position="0 0 10" radius="0.5" 
+                <a-entity class="orbit"  animation="property: rotation; from: 0 360 0; to: 0 0 0; loop: true; dur: 30000; easing: linear"> 
+                    <a-sphere shadow="receive: true" id="lens15" link="href: ./pages/References.html" roughness="0.3"  color="yellow" position="0 0 10" radius="0.5" 
                         event-set__enter="_event: mouseenter; material.color: green "
                         event-set__leave="_event: mouseleave; material.color: yellow" >
                         <a-text  position="0 0.9 0" scale="2 2"  align="center" value="References" look-at="#camera"></a-text>
@@ -65,7 +65,7 @@
 
 
 
-                <a-entity class="orbit"   animation="property: rotation; from: 0 55.4 0; to: 0 415.4 0; loop: true; dur: 50000; easing: linear"> 
+                <a-entity class="orbit" shadow="receive: true"  animation="property: rotation; from: 0 55.4 0; to: 0 415.4 0; loop: true; dur: 50000; easing: linear"> 
                     <a-sphere  id="lens2" roughness="0.3" link="href: ./pages/lens2.html" color="tomato" position="0 0 20" radius="1" 
                         event-set__enter="_event: mouseenter; material.color: green "
                         event-set__leave="_event: mouseleave; material.color: tomato" >
@@ -73,7 +73,7 @@
                     </a-sphere >
                 </a-entity>
                 
-                <a-entity class="orbit"   animation="property: rotation; from: 0 83.1 0; to: 0 443.1 0; loop: true; dur: 50000; easing: linear"> 
+                <a-entity class="orbit" shadow="receive: true"  animation="property: rotation; from: 0 83.1 0; to: 0 443.1 0; loop: true; dur: 50000; easing: linear"> 
                     <a-sphere  id="lens3" roughness="0.3" link="href: ./pages/lens3.html" color="tomato" position="0 0 20" radius="1" 
                     event-set__enter="_event: mouseenter; material.color: green "
                     event-set__leave="_event: mouseleave; material.color: tomato" >
@@ -81,7 +81,7 @@
                     </a-sphere >
                 </a-entity>
                 
-                <a-entity class="orbit"   animation="property: rotation; from: 0 110.8 0; to: 0 470.8 0; loop: true; dur: 50000; easing: linear"> 
+                <a-entity class="orbit" shadow="receive: true"  animation="property: rotation; from: 0 110.8 0; to: 0 470.8 0; loop: true; dur: 50000; easing: linear"> 
                     <a-sphere  id="lens4" roughness="0.3" link="href: ./pages/lens4.html" color="tomato" position="0 0 20" radius="1" 
                     event-set__enter="_event: mouseenter; material.color: green "
                     event-set__leave="_event: mouseleave; material.color: tomato" >
@@ -89,7 +89,7 @@
                     </a-sphere >
                 </a-entity>
             
-                <a-entity class="orbit"   animation="property: rotation; from: 0 138.5 0; to: 0 498.5 0; loop: true; dur: 50000; easing: linear"> 
+                <a-entity class="orbit"  shadow="receive: true" animation="property: rotation; from: 0 138.5 0; to: 0 498.5 0; loop: true; dur: 50000; easing: linear"> 
                     <a-sphere  id="lens5" roughness="0.3" link="href: ./pages/lens5.html" color="tomato" position="0 0 20" radius="1" 
                     event-set__enter="_event: mouseenter; material.color: green "
                     event-set__leave="_event: mouseleave; material.color: tomato" >
@@ -97,7 +97,7 @@
                     </a-sphere >
                 </a-entity>
 
-                <a-entity class="orbit"   animation="property: rotation; from: 0 166.2 0; to: 0 526.2 0; loop: true; dur: 50000; easing: linear"> 
+                <a-entity class="orbit" shadow="receive: true"  animation="property: rotation; from: 0 166.2 0; to: 0 526.2 0; loop: true; dur: 50000; easing: linear"> 
                     <a-sphere  id="lens6" roughness="0.3" link="href: ./pages/lens6.html" color="tomato" position="0 0 20" radius="1" 
                     event-set__enter="_event: mouseenter; material.color: green "
                     event-set__leave="_event: mouseleave; material.color: tomato" >
@@ -105,7 +105,7 @@
                     </a-sphere >
                 </a-entity>
 
-                <a-entity class="orbit"   animation="property: rotation; from: 0 193.9 0; to: 0 553.9 0; loop: true; dur: 50000; easing: linear"> 
+                <a-entity class="orbit" shadow="receive: true"  animation="property: rotation; from: 0 193.9 0; to: 0 553.9 0; loop: true; dur: 50000; easing: linear"> 
                     <a-sphere  id="lens7" roughness="0.3" link="href: ./pages/lens7.html" color="tomato" position="0 0 20" radius="1" 
                     event-set__enter="_event: mouseenter; material.color: green "
                     event-set__leave="_event: mouseleave; material.color: tomato" >
@@ -113,7 +113,7 @@
                     </a-sphere >
                 </a-entity>
 
-                <a-entity class="orbit"   animation="property: rotation; from: 0 221.6 0; to: 0 581.6 0; loop: true; dur: 50000; easing: linear"> 
+                <a-entity class="orbit" shadow="receive: true"  animation="property: rotation; from: 0 221.6 0; to: 0 581.6 0; loop: true; dur: 50000; easing: linear"> 
                     <a-sphere  id="lens8" roughness="0.3" link="href: ./pages/lens8.html" color="tomato" position="0 0 20" radius="1" 
                     event-set__enter="_event: mouseenter; material.color: green "
                     event-set__leave="_event: mouseleave; material.color: tomato" >
@@ -121,7 +121,7 @@
                     </a-sphere >
                 </a-entity>
 
-                <a-entity class="orbit"   animation="property: rotation; from: 0 249.3 0; to: 0 609.3 0; loop: true; dur: 50000; easing: linear"> 
+                <a-entity class="orbit" shadow="receive: true"  animation="property: rotation; from: 0 249.3 0; to: 0 609.3 0; loop: true; dur: 50000; easing: linear"> 
                     <a-sphere  id="lens9" roughness="0.3" link="href: ./pages/lens9.html" color="tomato" position="0 0 20" radius="1" 
                     event-set__enter="_event: mouseenter; material.color: green "
                     event-set__leave="_event: mouseleave; material.color: tomato" >
@@ -129,7 +129,7 @@
                     </a-sphere >
                 </a-entity>
 
-                <a-entity class="orbit"   animation="property: rotation; from: 0 277 0; to: 0 637 0; loop: true; dur: 50000; easing: linear"> 
+                <a-entity class="orbit" shadow="receive: true"  animation="property: rotation; from: 0 277 0; to: 0 637 0; loop: true; dur: 50000; easing: linear"> 
                     <a-sphere  id="lens10" roughness="0.3" link="href: ./pages/lens10.html" color="tomato" position="0 0 20" radius="1" 
                     event-set__enter="_event: mouseenter; material.color: green "
                     event-set__leave="_event: mouseleave; material.color: tomato" >
@@ -137,7 +137,7 @@
                     </a-sphere >
                 </a-entity>
 
-                <a-entity class="orbit"   animation="property: rotation; from: 0 304.7 0; to: 0 664.7 0; loop: true; dur: 50000; easing: linear"> 
+                <a-entity class="orbit" shadow="receive: true"  animation="property: rotation; from: 0 304.7 0; to: 0 664.7 0; loop: true; dur: 50000; easing: linear"> 
                     <a-sphere  id="lens11" roughness="0.3" link="href: ./pages/lens11.html" color="tomato" position="0 0 20" radius="1" 
                     event-set__enter="_event: mouseenter; material.color: green "
                     event-set__leave="_event: mouseleave; material.color: tomato" >
@@ -145,7 +145,7 @@
                     </a-sphere >
                 </a-entity>
 
-                <a-entity class="orbit"   animation="property: rotation; from: 0 332.4 0; to: 0 692.4 0; loop: true; dur: 50000; easing: linear"> 
+                <a-entity class="orbit" shadow="receive: true"  animation="property: rotation; from: 0 332.4 0; to: 0 692.4 0; loop: true; dur: 50000; easing: linear"> 
                     <a-sphere  id="lens12" roughness="0.3" link="href: ./pages/lens12.html" color="tomato" position="0 0 20" radius="1" 
                     event-set__enter="_event: mouseenter; material.color: green "
                     event-set__leave="_event: mouseleave; material.color: tomato" >
@@ -153,7 +153,7 @@
                     </a-sphere >
                 </a-entity>
 
-                <a-entity class="orbit"   animation="property: rotation; from: 0 360.1 0; to: 0 720.1 0; loop: true; dur: 50000; easing: linear"> 
+                <a-entity class="orbit" shadow="receive: true"  animation="property: rotation; from: 0 360.1 0; to: 0 720.1 0; loop: true; dur: 50000; easing: linear"> 
                     <a-sphere  id="lens13" roughness="0.3" link="href: ./pages/lens13.html" color="tomato" position="0 0 20" radius="1" 
                     event-set__enter="_event: mouseenter; material.color: green "
                     event-set__leave="_event: mouseleave; material.color: tomato" 
